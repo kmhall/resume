@@ -1,5 +1,6 @@
 
-var arrOfWords = ["beach", "cat", "mango", "tree", "marketing"];
+var arrOfWords = ["beach", "cat", "mango", "tree", "marketing","grant","peanut",
+"apple","bannana","potato","syllabus","rapper","people","rat","dog","cat","squawk"];
 
 var inputLetter = ""
 
@@ -18,7 +19,7 @@ var hangman = {
     "wordWithBlanks": [],
     "correctLetters": [],
     "wrongLetters": [],
-    "attempts": 10,
+    "attempts": 12,
 
     setLen: function (len) {
         this.len = len;
@@ -233,7 +234,7 @@ function buildGame() {
 
     document.getElementById("correct").innerHTML = "Correct Letters: ";
     document.getElementById("wrong").innerHTML = "Wrong Letters: ";
-    document.getElementById("attempts").innerHTML = "Attempts Remaining: 10";
+    document.getElementById("attempts").innerHTML = "Attempts Remaining: 12";
     document.getElementById("winnerLabel").innerHTML = "";
     document.getElementById("winTotal").innerHTML = "Total Wins:" + totalWins;
     document.getElementById("lossTotal").innerHTML = "Total Losses: " + totalLosses;
@@ -250,7 +251,7 @@ function buildGame() {
     h1.wordWithBlanks = [];
     h1.correctLetters = [];
     h1.wrongLetters = [];
-    h1.attempts = 10;
+    h1.attempts = 12;
 
     var word = chooseRandomWord(arrOfWords);
     var len = word.length;
