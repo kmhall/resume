@@ -1,0 +1,440 @@
+* {
+    transition: .2s ease-in-out;
+}
+html {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+.round{
+    border-radius: 50%;
+    display:inline;
+    height:80%;
+}
+.sub-title{
+    color:black;
+    font-weight:500;
+    margin-bottom:16px;
+    font-size:18px;
+}
+.workplaces .flexcontainer:not(:first-child){
+    margin-bottom: 32px;
+}
+.flexcontainer-tech{
+    padding-left:5px;
+    padding-right:5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin:auto;
+    max-width: 320px;
+}
+.flexcontainer-tech li{
+    margin:8px;
+    padding:6px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1) ;
+    border-radius: 8px;
+}
+.flexcontainer-tech li:hover{
+    color:#006689 !important;
+    transform: translateY(-4px);
+}
+.nav-link:hover{
+    color: #006689 !important;
+}
+button:hover{
+    transform: translateY(-4px);
+}
+.nav-item:hover{
+    transform: translateY(-4px);
+}
+a{
+    color: black;
+}
+.footer-space{
+    margin-top:30px;
+    margin-bottom:240px;
+}
+.noHeadbutt {
+    margin-top: -80px;
+   /* Size of fixed header */
+    padding-bottom: 80px;
+    display: block;
+}
+.contact h3{
+    color:black;
+}
+#border{
+    border: 2px solid rgba(0, 0, 0, 0.1) 
+}
+.projects-flexcontainer h3{
+    margin-top:30px;
+}
+.projects-flexcontainer:hover{
+    transform: translateY(-4px);
+}
+.projects img{
+    width: 350px;
+    height:350px;
+}
+button{
+    margin:10px;
+    padding: 20px;
+    padding-top: 14px;
+    padding-bottom:14px;
+    border-radius:12px;
+    background:white ;
+}
+a:hover{
+    color:#006689;
+    text-decoration: none;
+}
+button a{
+    color:#006689;
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
+}
+h1{
+    font-size: 64px;
+    font-weight: 700;
+}
+h2{
+    font-size: 48px;
+    font-weight: 300;
+}
+.workplaces h2{
+    margin-bottom: 32px;
+}
+h3{
+    font-size: 24px;
+    font-weight: 500;
+    color: #006689;
+}
+i{
+    font-size: 24px;
+    font-weight: 300;
+}
+p{
+    font-size:18px;
+    margin-bottom:0px;
+}
+.navbar-center {
+    width:100%;
+    display: flex;
+}
+#center{
+    padding-left: 20%;
+    padding-right:20%;
+}
+.navbar-center>li {
+    flex:1 1 auto;
+}
+.navbar{
+    box-shadow: 16px 0px 4px rgba(0, 0, 0, 0.2);
+    padding : 25px;
+    background: white;
+}
+.quote-box span{
+    display: inline-block;
+    width:80%;
+    height:2px;
+    background: black;
+}
+.quote-box{
+    margin-bottom:40px;
+}
+.cover-photo{
+    color: white;
+    background: url(images/mount-whitney.jpg) no-repeat center center ;
+    background-size: cover;
+    height: 99vh;
+    position: relative;
+}
+.title-box{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 40vh;
+}
+.title-box p{
+    margin-top:10px;
+}
+.title-box span{
+    content: " ";
+    height: 4px;
+    width: 180px;
+    background: #fff;
+    display: inline-block;
+}
+.quote{
+    display:block;
+    padding:20px;
+}
+.title-box h1{
+    margin-bottom: -4px;
+}
+.section{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+.profile{
+    margin-top:40px;
+    padding-top:20px;
+    margin-bottom:20px;
+    padding-bottom:20px;
+}
+.work{
+    margin-top:60px;
+    padding-top:60px;
+    margin-bottom:60px;
+    padding-bottom:60px;
+    background: #e8f0f5;
+}
+.workplaces .content{
+    padding-top: 10px;
+    text-align: left;
+    padding-left: 4%;
+    padding-right: 4%;
+    max-width: 1200px;
+}
+.profile-box{
+    flex-basis: 33%;
+    flex-grow: 0;
+    max-width: 371px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right:auto;
+}
+.profile-box .details{
+    display: inline;
+    margin-bottom: 0px;
+}
+.profile-box .head{
+    margin-bottom:20px;
+}
+.left-justify-padding{
+    padding-top:20px;
+}
+.icons .h3{
+    width: auto;
+    display:block;
+}
+.icons img{
+    padding:4px;
+    width:68px;
+   /* you can use % */
+    height: auto;
+}
+.icon-flexcontainer:hover{
+    transition: .5s ease-in-out;
+    filter: invert(1);
+}
+.workplaces img{
+    padding-left:4%;
+    padding-right:4%;
+    max-width: 375px;
+    min-width: 374px;
+}
+#bottom-spacing{
+    margin-bottom:40px;
+}
+#above-space{
+    padding-top:80px;
+    padding-bottom: 10px;
+}
+.flex-logo {
+    padding-left:2%;
+    padding-right:2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    max-width:1200px;
+}
+.projects{
+    margin-top:100px;
+    background: #e8f0f5;
+    height: auto;
+}
+.skills{
+    margin-top:80px;
+    height:auto;
+    background: white;
+    padding-bottom: 100px;
+}
+.contact{
+    color:black;
+    background: #5f6061;
+    padding-top:70px;
+}
+.section .header span{
+    content: " ";
+    height: 3px;
+    width: 180px;
+    background: black;
+    display: inline-block;
+    margin:auto;
+}
+.section h2{
+    margin-bottom: 20px;
+}
+@media all and (min-width:700px){
+    .projects-flexcontainer {
+        padding-left:2%;
+        padding-right:2%;
+        flex-direction: row;
+        max-width: 1200px;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left:20px;
+        margin-right:20px;
+        margin-bottom:20px;
+        margin-top:20px;
+   }
+    .icon-flexcontainer h3{
+        padding-top:15px;
+   }
+    .equal-width{
+        margin-left:5%;
+        padding-left:5%;
+        min-width: 49%;
+        max-width: 50%;
+   }
+    .flex-logo {
+        flex-direction: row;
+        align-items: flex-start;
+   }
+    .quote-box span{
+        width:90%;
+   }
+    .title-box span{
+        display: none;
+   }
+    h1{
+        display: inline-block;
+        position: relative;
+        padding: 0 8px 4px 8px;
+   }
+    h1::before{
+        top: 50%;
+        right: 100%;
+        position: absolute;
+        ;
+        content: " ";
+        height: 4px;
+        width: 60px;
+        background: #fff;
+        display: inline-block;
+   }
+    h1::after{
+        top: 50%;
+        left: 100%;
+        position: absolute;
+        ;
+        content: " ";
+        height: 4px;
+        width: 60px;
+        background: #fff;
+        display: inline-block;
+   }
+    .workplaces li{
+        padding-top: 20px;
+   }
+    .section .header span{
+        display: none;
+   }
+    h2{
+        display: inline-block;
+        text-align: center;
+   }
+    .header h2::before{
+        content: " ";
+        margin-bottom: 15px;
+        margin-right:8px;
+        height: 3px;
+        width: 60px;
+        position: relative;
+        background: black;
+        display: inline-block;
+   }
+    .header h2::after{
+        margin-bottom: 15px;
+        margin-left:8px;
+        position: relative;
+        content: " ";
+        height: 3px;
+        width: 60px;
+        background: black;
+        display: inline-block;
+   }
+}
+@media all and (min-width:1000px){
+    .flex-left-right{
+        width: 60%;
+        display:flex;
+        margin:0 auto;
+        justify-content: space-between;
+   }
+    .equal-width{
+        margin-left:20%;
+        padding-left:20%;
+        min-width: 49%;
+        max-width: 50%;
+   }
+    .icon-flexcontainer{
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        align-items: flex-start;
+        justify-content: start;
+        margin:auto;
+   }
+    .quote-box span{
+        width:100%;
+   }
+    .flexcontainer {
+        padding-left:2%;
+        padding-right:2%;
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        align-items: flex-start;
+        justify-content: center;
+        margin:auto;
+   }
+    .workplaces .content{
+        padding-top: 0px;
+        padding-left: 2%;
+        padding-right: 2%;
+   }
+    .workplaces img{
+        width:auto;
+        max-height:300px;
+   }
+    .profile-box .details{
+        display: block;
+   }
+    .left-justify{
+        text-align: left;
+   }
+    .left-justify-padding{
+        text-align: left;
+        padding-left:120px;
+        padding-top:0px;
+   }
+}
+@media all and (min-width:1400px){
+    .flex-left-right{
+        width:55%;
+   }
+}

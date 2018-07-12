@@ -1,0 +1,25 @@
+body {
+    position: relative;
+}
+.affix {
+    top: 160px;
+    z-index: 9999 !important;
+}
+
+
+.subsections {
+    margin-left: 40px;
+}
+
+
+@media screen and (max-width: 810px) {
+  #section1, #section11, #section12, #section13, #section42  {
+      margin-left: 150px;
+  }
+}
+
+#noHeadbutt { 
+    margin-top: -300px;        /* Size of fixed header */
+    padding-bottom: 300px; 
+    display: block; 
+  }

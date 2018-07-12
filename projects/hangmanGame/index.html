@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <div id="text">
+
+        <header>
+            <h1>Hangman Game</h1>
+            <br>
+            <button id="startGame" type="button">Start New Game</button>
+        </header>
+        <br>
+        <h4 id="directions"> </h4>
+        <br>
+        <h2 id="blanks"> </h2>
+
+
+
+        <ul class="categories">
+            <li>
+                <h2 id="correct"> </h2>
+                <br>
+                <h2 id="wrong"> </h2>
+
+
+            </li>
+            <li>
+                <br>
+                <h2 id="attempts"> </h2>
+
+            </li>
+            <li>
+
+                <h2 id="winTotal"> </h2>
+                <br>
+                <h2 id="lossTotal"> </h2>
+            </li>
+        </ul>
+        <br>
+        <h2 id="winnerLabel"> </h2>
+    </div>
+
+
+
+    <div id="particles-js"></div>
+
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script src="hangman.js"></script>
+</body>
+
+</html>

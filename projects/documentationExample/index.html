@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" class="home">
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bd5a2">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <title>Showpad SDK</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="scrollspy.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example3" data-offset="240">
+    <main class="container">
+        <div class="row">
+            <nav class="col-sm-3 navbar navbar-light bg-light" id="navbar-example3">
+                <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="50px">
+                    <li class="dropdown">
+                        <a href="#overview">SDK Overview</a>
+                        <ul class="nav nav-pills nav-stacked subsections ml-3 my-1">
+                            <li>
+                                <a href="#exampleExperience">Example Experiences</a>
+                            </li>
+                            <li>
+                                <a href="#workflow">Workflow</a>
+                            </li>
+                            <li>
+                                <a href="#structure">Overall Structure</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#section1">Build a Basic Experience App</a>
+                        <ul class="nav nav-pills nav-stacked subsections ml-3 my-1">
+                            <li>
+                                <a href="#section11">Step by Step Guide</a>
+                            </li>
+                            <li>
+                                <a href="#customizing">Customizing the App</a>
+                            </li>
+                            <li>
+                                <a href="#section12">Test the Experience App</a>
+                            </li>
+                            <li>
+                                <a href="#section13">Package and Upload</a>
+                            </li>
+                            <li>
+                                <a href="#section14">Validation Errors</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#configuring">Configuring Your Experience</a>
+                        <ul class="nav nav-pills nav-stacked subsections ml-3 my-1">
+                            <li>
+                                <a href="#manifest">Manifest.json</a>
+                            </li>
+                            <li>
+                                <a href="#config">Config.json</a>
+                            </li>
+                            <li>
+                                <a href="#changingAssets">Changing Assets</a>
+                            </li>
+
+
+                        </ul>
+
+
+                    </li>
+                    <li>
+                        <a href="#support">Support</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="col-sm-9">
+                <span class="noHeadbutt" id="overview">&nbsp;</span>
+                <span class="week">A CLI tool to help you build your own Experience App</span>
+                <h2>Software Development Kit</h2>
+                <span class="colors accent"></span>
+                <section>
+                    <p>
+                        Next to Classic and Advanced Experiences, you can now also create your own Experience App. It’s designed to help our customers
+                        build their own immersive experiences, in-house or with their preferred agency so they can enjoy
+                        all the power of Showpad.
+                    </p>
+                    <p>Why build your own Experience App?</p>
+                    <ul>
+                        <li>
+                            <b>Limitless:</b> An Experience is built with HTML, CSS, and JS, so you’re only limited by your
+                            imagination
+                        </li>
+                        <li>
+                            <b>Easy:</b> Integrate easily with Showpad using the Javascript API and the REST API
+                        </li>
+                        <li>
+                            <b>Customizable:</b> Make your Experience configurable so the marketing admin can make adjustments.
+                        </li>
+                    </ul>
+                    <span class="noHeadbutt" id="exampleExperience"> &nbsp; </span>
+                    <div class="key">
+                        <b>Example Experiences</b>
+                    </div>
+
+
+                    <span class="noHeadbutt" id="workflow"> &nbsp; </span>
+                    <div class="key">
+                        <b>Workflow</b>
+                    </div>
+                    <ol>
+                        <li>The basic folder structure of your experience is created with npm and the Showpad SDK</li>
+                        <li>The experience is customized, configured, and tested on your local device</li>
+                        <li>The experience is packaged into a
+                            <code>.showpad</code> file</li>
+                        <li>The experience is uploaded into Showpad</li>
+                        <li>The Admin makes changes to the experience's configuration within Showpad</li>
+                        <li>The finished experience is deployed to all Showpad users within your organization</li>
+
+
+
+                    </ol>
+
+                    <span class="noHeadbutt" id="structure"> &nbsp; </span>
+                    <div class="key">
+                        <b>Overall Structure</b>
+                    </div>
+
+                    <figure>
+                        <pre>
+    .
+    ├── package.json
+    └── src
+        ├── config.json
+        ├── index.html
+        └── manifest.json</pre>
+                        <figcaption>The basic directory structure of an Experience App</figcaption>
+                    </figure>
+                    <ul>
+                        <li>
+                            <b>Package.json:</b> Identifies and lists basic information about the NPM project. Don't worry about
+                            the contents of this file.
+                        </li>
+                        <li>
+
+                            <b>Src:</b> Must contain the files that will be used within your Experience. All user-created files
+                            should be in this directory.
+
+                        </li>
+                        <li>
+
+                            <b>Config.json:</b> Can be used to allow the Showpad admin to make changes to your Experience's
+                            content on the fly.
+                        </li>
+                        <li>
+
+                            <b>Index.html:</b> The starting place of your Experiences HTML
+                        </li>
+                        <li>
+
+                            <b>Manifest.json:</b> Contains general information about the Experience App
+
+                        </li>
+                    </ul>
+
+                </section>
+                <section>
+                    <h3 id="section1">Build a Basic Experience App</h3>
+                    <figure>
+                        <a href="https://asciinema.org/a/4oOnC3u0oJgegTTOHYnQCJBfv" target="_blank">
+                            <img src="https://asciinema.org/a/4oOnC3u0oJgegTTOHYnQCJBfv.png" alt="A full step by step video on how to set up your Experience App in the terminal"
+                            />
+                        </a>
+                        <figcaption>View a full step by step video on how to set up your Experience App in the terminal.</figcaption>
+                    </figure>
+                    <span class="noHeadbutt" id="section11"> &nbsp; </span>
+                    <div class="key">
+                        <b>Step by Step Guide</b>
+                    </div>
+                    <p>
+                        The first step in creating your experience app will be to download and install both Node.js and NPM (
+                        <i>Node Package Manager</i>) to your local machine. The most recent versions of Node.js and NPM can
+                        be found at
+                        <a href="https://www.npmjs.com/get-npm" target="_blank">https://www.npmjs.com/get-npm</a>.
+                    </p>
+                    <p>
+                        Next you'll want to open up your terminal application and create a new project directory using terminal commands
+                        <code>mkdir projectname</code> and
+                        <code>cd projectname</code>. The
+                        <code>mkdir</code> command will make a new directory whereas
+                        <code>cd</code> will change your directory.
+                    </p>
+                    <figure>
+                        <img src="images/terminal/mkdir-cd.png" alt="Creating and changing a project directory" />
+                        <figcaption>Creating and changing a project directory.</figcaption>
+                    </figure>
+                    <p>
+                        After you've created your project directory run
+                        <code>npm init</code> which will set up a new npm package. Don't worry about filling out the project details, you can
+                        always go back and edit it later.
+                    </p>
+                    <figure>
+                        <img src="images/terminal/npm-init-start.png" alt="Initalizing the Node Project Manager" />
+                        <figcaption>Initalizing the Node Project Manager.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/terminal/npm-init.png" alt="Don't worry about filling in all of the prompted project details" />
+                        <figcaption>Don't worry about filling in all of the prompted project details.</figcaption>
+                    </figure>
+                    <p>
+                        Next you'll want to run the
+                        <code>npm install --save-dev @showpad/sdk</code> command. Just go ahead and grab some coffee while the SDK installs. This line of code will install
+                        the Showpad SDK, making the Showpad CLI available. With the CLI now availabe, you'll be able to testing
+                        and package your experience.
+                    </p>
+
+                    <figure>
+                        <img src="images/terminal/npm-install-start.png" alt="The install begins" />
+                        <figcaption>The install begins.</figcaption>
+                    </figure>
+                    <p>
+                        To check if you've installed the SDK properly, go ahead and run
+                        <code>npx showpad help</code>. If all goes well, you'll see all of the commands available to the SDK, including
+                        <code>auth</code>,
+                        <code>experience</code>,
+                        <code>asset</code>, and
+                        <code>help</code>.
+                    </p>
+                    <figure>
+                        <img src="images/terminal/npx-showpad-help.png" alt="All of Showpad's terminal commands" />
+                        <figcaption>All of Showpad's terminal commands.</figcaption>
+                    </figure>
+                    <p>
+                        Now you'll want to hop into your Showpad admin dashboard. You can access your dashboard by going to
+                        <a href="https://www.showpad.biz" target="_blank">https://www.showpad.biz</a>.
+                    </p>
+                    <figure>
+                        <img src="images/dashboard-login.png" alt="Showpad Dashboard Login">
+                        <figcaption>Showpad's admin dashboard login screen.</figcaption>
+                    </figure>
+                    <p>
+                        Once inside your dashboard you'll want to get to your OAuth Client Manager. You can get there by going to
+                        <em>Settings &rAarr; Integrations &rAarr; API &rAarr; Manage OAuth Clients</em>. Once there go ahead
+                        and create a new OAuth Client and fill in all of the relevant details.
+                    </p>
+                    <figure>
+                        <img src="images/dashboard-home.png" alt="Showpad Dashboard Home">
+                        <figcaption>Showpad's admin dashboard home screen.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/dashboard-api.png" alt="Showpad Dashboard API">
+                        <figcaption>Admin API settings.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/dashboard-oauth.png" alt="Showpad Dashboard OAuth">
+                        <figcaption>All of your current OAuth clients. Don't worry if you don't have any yet!</figcaption>
+                    </figure>
+                    <p>
+                        Now that the OAuth Client has been created, go back into the terminal and run
+                        <code>npx showpad auth</code>, making sure to enter your login and OAuth details you just used in the previous steps.
+                    </p>
+                    <figure>
+                        <img src="images/terminal/npx-showpad-auth.png" alt="Link the Showpad SDK to your new Oauth client" />
+                        <figcaption>Link the Showpad SDK to your new Oauth client.</figcaption>
+                    </figure>
+                    <p>
+                        Then you’ll run
+                        <code>showpad experience init</code> and enter in all of your details. This command will create the basic folder structure with the three
+                        basic fields necessary for an experience, the
+                        <code>index.html</code>,
+                        <code>manifest.json</code>, and
+                        <code>config.json</code>.
+                    </p>
+                    <figure>
+                        <img src="images/terminal/showpad-experience-init.png" alt="Initialize your Showpad Experience" />
+                        <figcaption>Initialize your Showpad Experience.</figcaption>
+                    </figure>
+                    <span class="noHeadbutt" id="customizing"> &nbsp; </span>
+                    <div class="key">
+                        <!--  -->
+                        <b>Customizing the App</b>
+                    </div>
+                    <p>
+                        Experience apps can be customized just like any other web application. A basic example of this process is having an index.html
+                        to display your page while having an app.js pulling data from the Showpad Javascript API.
+                    </p>
+                    <b>Index.html</b>
+                    <p>The
+                        <code>index.html</code> is the entrypoint of your Experience App. When your app is opened in Showpad, this html file is
+                        loaded inside an iframe or webview.</p>
+                    <p>Here is an example of a working
+                        <code>index.html</code> within an Experience App:</p>
+                    <pre><code>
+    &lt;!DOCTYPE HTML&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello World!&lt;/h1&gt;
+        &lt;pre id="info"&gt;&lt;/pre&gt;
+        &lt;script src="app.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+                    <b>App.js</b>
+                    <p>The
+                        <code>app.js</code> file will be loaded by
+                        <code>index.html</code>. It is used to dynamically populate the page with information queried from the Showpad Javascript
+                        API.
+                    </p>
+                    <p>This is an example of a working
+                        <code>app.js</code> file that pulls data from the Showpad Javascript API:</p>
+                    <pre><code>                 
+    var loaded = false;
+    window.onShowpadLibLoaded = function () {
+        if (loaded) {return;}
+        loaded = true;
+        var infobox = document.getElementById('info');
+        var uinfo = window.ShowpadLib.getUserInfo();
+        var dinfo = window.ShowpadLib.getDeviceInfo();
+        infobox.innerHTML += "Email:         " + uinfo.email + "\n";
+        infobox.innerHTML += "ID:            " + uinfo.id + "\n";
+        infobox.innerHTML += "Username:      " + uinfo.user_name + "\n";
+        infobox.innerHTML += "Full Name:     " + uinfo.full_name + "\n";
+        infobox.innerHTML += "Accessing Via: " + dinfo.app + "\n";
+    };</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--  -->
+                    <span class="noHeadbutt" id="section12"> &nbsp; </span>
+                    <div class="key">
+                        <b>Test the Experience App</b>
+                    </div>
+                    <p>
+                        <code>showpad experience serve</code> in terminal, opening your experience on a local host in your browser.
+                    </p>
+                    <figure>
+                        <img src="images/terminal/showpad-experience-serve.png" alt="Test your Experience by running it locally on your browser"
+                        />
+                        <figcaption>Test your Experience by running it locally on your browser.</figcaption>
+                    </figure>
+                    <span class="noHeadbutt" id="section13"> &nbsp; </span>
+                    <div class="key">
+                        <b>Package and Upload the Experience App</b>
+                    </div>
+                    <p>
+                        In your terminal run
+                        <code>showpad experience package</code>. This command will create a zipped
+                        <code>.showpad</code> file in your current directory.
+                    </p>
+                    <figure>
+                        <img src="images/terminal/showpad-experience-package.png" alt="our Experience app will be zipped and created as a .showpad file"
+                        />
+                        <figcaption>Your Experience app will be zipped and created as a .showpad file.</figcaption>
+                    </figure>
+                    <p>
+                        Back in your
+                        <a href="https://www.showpad.biz" target="_blank">Showpad Admin Dashboard</a>, create a new Channel by going to
+                        <em>Content &rAarr; Open Channel Builder &rAarr; Select a Channel &rAarr; Create a New Channel</em>.
+                    </p>
+                    <img src="images/dashboard-home-content.png" alt="Showpad Dashboard Home">
+                    <img src="images/dashboard-content.png" alt="Showpad Dashboard Content">
+                    <img src="images/dashboard-channel-builder.png" alt="Showpad Dashboard Channel Builder">
+                    <img src="images/dashboard-channels.png" alt="Showpad Dashboard Channels">
+                    <p>
+                        Go ahead and name your Channel once you get there and select the option that says
+                        <b>Your Experience App</b>. You're free to create the Channel once you've done that.
+                    </p>
+                    <img src="images/dashboard-create-new.png" alt="Showpad Dashboard Create New Channel">
+                    <p>
+                        Once your Experince App channel has been created you can upload the Experience App by selecting the zipped
+                        <code>.showpad</code> file that was created after running
+                        <code>showpad experience package</code>.
+                    </p>
+                    <p>
+                        Click
+                        <b>Publish Experience</b> and voilà! You've published your first Experience App!
+
+                        <span class="noHeadbutt" id="section14"> &nbsp; </span>
+                        <div class="key">
+                            <b>Validation Errors</b>
+                        </div>
+                        <p>Through the Online Platform, you can upload your Experience App. Part of that process is a validation step to check if the package meets our requirements.</p>
+                
+                        <p>The table below contains an overview of the possible validation errors.</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+
+                                    <th>Key</th>
+                                    <th>Message</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>wrong-extension</td>
+                                    <td>The bundle should have the
+                                        <code>.showpad</code> extension</td>
+                                    <td>Your package should have the
+                                        <code>.showpad</code> extension</td>
+                                </tr>
+                                <tr>
+                                    <td>invalid-bundle</td>
+                                    <td>The bundle could not be read/extracted</td>
+                                    <td>The bundle was incorrectly packaged. Best to use the SDK for this</td>
+                                </tr>
+                                <tr>
+                                    <td>manifest-not-found</td>
+                                    <td>No
+                                        <code>manifest.json</code> found</td>
+                                    <td>We could not find a
+                                        <code>manifest.json</code> file in the package</td>
+                                </tr>
+                                <tr>
+                                    <td>manifest-invalid-format</td>
+                                    <td>The
+                                        <code>manifest.json</code> file could not be read</td>
+                                    <td>The contents of the
+                                        <code>manifest.json</code> file should be valid JSON as described above</td>
+                                </tr>
+                                <tr>
+                                    <td>manifest-invalid-contents</td>
+                                    <td>The manifest has invalid contents</td>
+                                    <td>Identifier and version are not found in the manifest. See above for the correct structure</td>
+                                </tr>
+                                <tr>
+                                    <td>invalid-version</td>
+                                    <td>The given version in the manifest is invalid</td>
+                                    <td>This version is already used and was used during another upload</td>
+                                </tr>
+                                <tr>
+                                    <td>no-index-found</td>
+                                    <td>No
+                                        <code>index.html</code> found</td>
+                                    <td>We could not find an
+                                        <code>index.html</code> file</td>
+                                </tr>
+                                <tr>
+                                    <td>config-invalid-format</td>
+                                    <td>The
+                                        <code>config.json</code> file could not be read</td>
+                                    <td>The
+                                        <code>config.json</code> file is invalid JSON</td>
+                                </tr>
+                                <tr>
+                                    <td>config-invalid-contents</td>
+                                    <td>The contents in
+                                        <code>config.json</code> could not be parsed</td>
+                                    <td>The contents member in
+                                        <code>config.json</code> has invalid data. (Could be wrong types, wrong structure, …)</td>
+                                </tr>
+                                <tr>
+                                    <td>config-invalid-labels</td>
+                                    <td>The labels in
+                                        <code>config.json</code> could not be parsed</td>
+                                    <td>The labels member in
+                                        <code>config.json</code> has invalid data. (Could be wrong types, wrong structure, …)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3 id="configuring">Configure Tour Experience</h3>
+                        <span class="noHeadbutt" id="manifest"> &nbsp; </span>
+                        <div class="key">
+                            <b>Manifest.json</b>
+                        </div>
+                        <p>The
+                            <code>manifest.json</code> contains general information about your Experience App like a unique identifier, version, name,
+                            description, and author.</p>
+                        <p>Here is an example of a working
+                            <code>manifest.json</code> within an Experience App:</p>
+                        <pre><code>
+    {
+        "identifier": "com.showpad.showtime.demo",
+        "name": "Showtime Demo",
+        "version": "1.0.0",
+        "description": "A demo Experience for Showtime",
+        "author": "Showpad"
+    }
+                    </code></pre>
+                        <p>Important note: Each time a new version of an experience is created it is necessary to give the
+                            <code>manifest.json</code> a new, unique, version number in order to package/upload the experience properly. </p>
+
+
+
+
+
+
+
+
+
+
+
+                        <span class="noHeadbutt" id="config"> &nbsp; </span>
+                        <div class="key">
+                            <b>Config.json</b>
+                        </div>
+                        <img src="http://via.placeholder.com/350x750" alt="">
+                        <span class="noHeadbutt" id="changingAssets"> &nbsp; </span>
+                        <div class="key">
+                            <b>Changing Assets</b>
+                        </div>
+                        <img src="http://via.placeholder.com/350x750" alt="">
+
+                        <h3 id="support">Support</h3>
+                        <p>
+                            <div class="key">
+                                <b>Support</b>
+                            </div>
+
+                            <br> If you have questions or feedback, please contact us via
+                            <a href="mailto:support@showpad.com">support@showpad.com</a>.
+                            <div class="key">
+                                <b>License</b>
+                                <br>
+                            </div>
+                            <br> See the license at
+                            <a href="https://www.showpad.com/developer-terms" target="_blank">https://www.showpad.com/developer-terms</a>
+                        </p>
+                </section>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
