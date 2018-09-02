@@ -6,7 +6,7 @@ html {
 }
 
 #side-space{
-    max-width: 60%;
+    max-width: 50%;
     align-content: center;
     margin: auto;
     margin-top: 40px;
@@ -258,6 +258,7 @@ p{
     max-width: 375px;
     min-width: 374px;
 }
+
 #bottom-spacing{
     margin-bottom:40px;
 }
