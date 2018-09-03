@@ -12,12 +12,6 @@ html {
     margin-top: 40px;
 }
 
-body{
-        zoom: 1; 
-        -moz-transform: scale(3); 
-        -moz-transform-origin: 0 0;
-    } 
-
 .round{
     border-radius: 50%;
     display:inline;
