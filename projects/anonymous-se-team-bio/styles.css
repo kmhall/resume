@@ -1,0 +1,279 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600|Source+Sans+Pro:400,400i,600,600i,700,700i');
+
+* {
+    transition: .2s ease-in-out;
+}
+
+html {
+    font-family: 'Source Sans Pro';
+    background: white;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+}
+
+h1 {
+    font-weight: 700;
+    margin-top: 4px !important;
+}
+
+h2 {
+    margin-top: 50vh;
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+.slick-prev {
+    left: 24px !important;
+    top: 55% !important;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 24px !important;
+    top: 55% !important;
+}
+
+.slick-list, .slick-track {
+    height: 100vh;
+}
+
+main.homepage * {
+    margin-left: 5% !important;
+}
+
+.bar {
+    height: 8px;
+    width: 100px;
+    background: #00BB8C;
+    content: " ";
+    display: inline-block;
+    margin-bottom: 32px;
+}
+
+.little-bar {
+    margin-bottom: 0;
+    height: 4px;
+    width: 40px;
+}
+
+.locations  {
+    text-align: center;
+}
+
+.locations a {
+    text-decoration: none;
+}
+
+.locations h2 {
+    color: white;
+}
+
+p {
+    margin-bottom: 24px;
+    font-size: 1.1rem;
+    line-height: 145%;
+}
+
+.people p.i {
+    padding-top: 16px;
+    margin-bottom: 32px;
+}
+
+.fullSizeImage {
+    height: 100vh;
+}
+
+.pinRight {
+    position: -webkit-sticky;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.showpad-team {
+    background: url(images/showpad-team.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.sanFrancisco {
+    background: url(images/locations/sanFrancisco.jpg) no-repeat center center ;
+    background-size: cover;
+}
+
+.chicago {
+    background: url(images/locations/chicago.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.ghent {
+    background: url(images/locations/ghent.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.london {
+    background: url(images/locations/london.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.newYork {
+    background: url(images/locations/newYork.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.austin {
+    background: url(images/locations/austin.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.atlanta {
+    background: url(images/locations/atlanta.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.subtitle {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.people li {
+    display: flex;
+    padding-bottom: 32px;
+    cursor: pointer;
+    opacity: .7;
+}
+
+.people li:hover span {
+    width: 100px;
+}
+
+.people li:hover {
+    opacity: 1;
+}
+
+.people li:hover h3 {
+    color: rgba(0, 0, 0, .8);
+}
+
+.about {
+    margin-top: 32px;
+    display: none;
+}
+
+.about li {
+    display: block;
+    padding-bottom: 16px;
+    line-height: 140%;
+    max-width: 500px;
+}
+
+.people {
+    margin-left: 8%;
+    margin-top: 10%;
+}
+
+.people p {
+    margin: 0;
+}
+
+.people li div {
+    margin-left: 32px;
+}
+
+.people img {
+    max-width: 120px;
+    height: 120px;
+}
+
+main.homepage {
+    margin-top: 20vh;
+}
+
+.cta {
+    margin-top: 8px;
+    display: inline-block;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    padding: 16px 16px;
+    color: white;
+    background: #00BB8C;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.cta:hover {
+    transform: translateY(-8px);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+}
+
+.cta:active {
+    transform: scale(0.9);
+    transition: .2s ease-in-out;
+}
+
+.take-me-back:before, .take-me-back:after {
+    display: block;
+    content: "";
+    z-index: 3;
+}
+
+#locations .take-me-back:before, #locations .take-me-back:after {
+    background: #fff;
+}
+
+.take-me-back:before {
+    top: 40px;
+    left: 24px;
+    position: absolute;
+    width: 24px;
+    height: 4px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: #000;
+    transform: rotateZ(45deg);
+}
+
+.take-me-back:after {
+    top: 40px;
+    left: 24px;
+    position: absolute;
+    width: 24px;
+    height: 4px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: #000;
+    transform: rotateZ(-45deg);
+}
+
+@media screen and (max-width: 670px) {
+    .locations h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .locations h2 {
+        font-size: 1.8rem;
+        margin-left: -16px;
+    }
+}
